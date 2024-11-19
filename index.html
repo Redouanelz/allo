@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-poppins">
+    <nav class="bg-white text-gray-800 shadow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="#" class="text-2xl font-bold text-cyan-600">
+              <img src="./images/logo-allo.jpg" alt="Allo Imane-Zaki Logo" width="300px" />
+            </a>
+          </div>
+
+          <!-- Menu for larger screens -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a href="" class="text-gray-500 hover:text-cyan-600">Home</a>
+            <a href="#about" class="text-gray-500 hover:text-cyan-600">About</a>
+            <a href="#" class="text-gray-500 hover:text-cyan-600">Services</a>
+            <a href="#" class="text-gray-500 hover:text-cyan-600">Contact</a>
+            <a
+              href="#"
+              class="flex items-center text-cyan-600 hover:text-cyan-600 space-x-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-headset"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"
+                />
+              </svg>
+              <span>+212 693380000</span>
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-toggle" class="focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow">
+        <a
+          href="#"
+          class="block px-4 py-2 text-gray-800 hover:bg-teal-100 hover:text-cyan-600"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="block px-4 py-2 text-gray-800 hover:bg-teal-100 hover:text-cyan-600"
+          >About</a
+        >
+        <a
+          href="#"
+          class="block px-4 py-2 text-gray-800 hover:bg-teal-100 hover:text-cyan-600"
+          >Services</a
+        >
+        <a
+          href="#"
+          class="block px-4 py-2 text-gray-800 hover:bg-teal-100 hover:text-cyan-600"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <div class="core bg-white" id="#about">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-40">
+          <!-- Text Section -->
+          <div class="text-left mt-6 md:mt-14 md:pr-10">
+            <h1 class="text-cyan-600 font-bold text-2xl md:text-3xl">NETTOYAGE</h1>
+            <h2 class="text-xl md:text-2xl pb-4 md:pb-6 font-semibold">
+              Votre Société de Nettoyage <br> de Confiance
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              <b>ALLO IMANE-ZAKI</b> est une entreprise polyvalente spécialisée dans les travaux de construction, de rénovation et d’aménagement, allant de la menuiserie bois et aluminium à la plomberie, l’électricité, la peinture et la construction métallique. Nous proposons également des services d’embellissement, de gestion événementielle, d’entretien d’espaces verts, ainsi que des solutions en génie civil, hydraulique et transactions immobilières. Actifs dans la distribution, le négoce, l’import-export de matériaux, et les services de communication, nous offrons également des solutions de recrutement et d’intérim. Notre mission est de répondre aux besoins variés de nos clients avec professionnalisme, qualité et un engagement envers un développement durable.
+            </p>
+          </div>
+    
+          <!-- Image Section -->
+          <div class="flex justify-center items-center">
+            <br>
+            <img src="./images/23.jpeg" alt="Nettoyage" class="w-full max-w-md rounded-lg shadow-lg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-cyan-600 text-white">
+      <div class="container mx-auto px-4 py-10 sm:py-16 md:py-24 lg:py-32 xl:py-20">
+        <p class="text-base sm:text-lg md:text-xl leading-relaxed text-center">
+          <img src="./images/map.webp" alt="ALLO" class="block mx-auto" width="150px">
+          <h1 class="text-3xl text-center mt-8">Découvrez les villes marocaines  <br> où nous faisons la différence !</h1>
+          <p class="text-lg text-center">Besoin d’un service de nettoyage fiable et efficace ? <br>
+            Avec ALLO, redonnez éclat et fraîcheur à vos <espaces class="br"></espaces> Partout au Maroc, <br>
+            nous transformons vos lieux en véritables modèles de propreté !
+            <br>
+        </p>
+      </div>
+    </div>
+    
+    
+
+    <footer>
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4">
+            <img src="./images/logo-allo.jpg" alt="Allo Imane-Zaki Logo" width="250px" />
+
+            <h1>Votre Société de Nettoyage
+              de Confiance</h1>
+              <h2 class="text-cyan-600"> ALLO IMANE-ZAKI</h2>
+            <br />
+          </div>
+          <div class="p-4">
+            <h1 class="text-lg text-cyan-600 mb-5">Services</h1>
+            <a href="" class="text-sm text-gray-600 hover:text-cyan-600 mb-8"
+              >Nettoyage de Bureaux</a
+            >
+            <br /><br />
+            <a href="" class="text-sm text-gray-600 hover:text-cyan-600 mb-8"
+              >Nettoyage d'Immeubles</a
+            >
+            <br /><br />
+            <a href="" class="text-sm text-gray-600 hover:text-cyan-600 mb-8"
+              >Nettoyage d'Appartements et de Maisons</a
+            >
+            <br /><br />
+          </div>
+          <div class="p-4">
+            <h1 class="text-lg text-cyan-600 mb-5">Informations</h1>
+            <a href="" class="text-sm text-gray-600 hover:text-cyan-600 mb-8"
+              >A propos de nous</a
+            >
+            <br /><br />
+            <a href="" class="text-sm text-gray-600 hover:text-cyan-600 mb-8"
+              >Adresse</a
+            >
+            <br /><br />
+          </div>
+          <div class="p-4">
+            <h1 class="text-lg text-cyan-600 mb-5">Suivez-nous</h1>
+
+            <div class="mt-2">
+              <a
+                href=""
+                class="flex items-center text-sm text-gray-600 hover:text-cyan-600 space-x-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                  />
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </div>
+            <div class="mt-2">
+              <a
+                href=""
+                class="flex items-center text-sm text-gray-600 hover:text-cyan-600 space-x-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                  />
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </div>
+            <div class="mt-2">
+              <a
+                href=""
+                class="flex items-center text-sm text-gray-600 hover:text-cyan-600 space-x-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-whatsapp"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                  />
+                </svg>
+                <span>Whatsapp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle mobile menu
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      let currentIndex = 0;
+      const slides = document.querySelectorAll("#carousel img");
+      const prevButton = document.getElementById("prev");
+      const nextButton = document.getElementById("next");
+      const indicators = document.querySelectorAll(".flex button");
+
+      function updateCarousel() {
+        const offset = -currentIndex * 100;
+        document.getElementById(
+          "carousel"
+        ).style.transform = `translateX(${offset}%)`;
+
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle("bg-teal-600", index === currentIndex);
+          indicator.classList.toggle("bg-gray-500", index !== currentIndex);
+        });
+      }
+
+      prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = slides.length - 1; // Loop to last slide
+        }
+        updateCarousel();
+      });
+
+      nextButton.addEventListener("click", () => {
+        if (currentIndex < slides.length - 2) {
+          currentIndex++;
+        } else {
+          currentIndex = 0; // Loop to first slide
+        }
+        updateCarousel();
+      });
+
+      // Initialize carousel
+      updateCarousel();
+    </script>
+  </body>
+</html>
