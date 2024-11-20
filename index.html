@@ -21,6 +21,125 @@
         },
       };
     </script>
+        <style>
+          *::selection {
+            color: white;
+            background-color: rgb(5, 99, 99);
+          }
+          /* Base card styling */
+          .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          /* Hover animation */
+          .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+          }
+
+          /* Image scaling */
+          .card img {
+            transition: transform 0.3s ease;
+          }
+
+          .card:hover img {
+            transform: scale(1.1);
+          }
+
+          /* Text color transition */
+          .card h1 {
+            color: #06b6d4; /* Cyan */
+            transition: color 0.3s ease;
+          }
+
+          .card:hover h1 {
+            color: #0284c7; /* Darker cyan */
+          }
+
+          .card p {
+            color: #6b7280; /* Gray */
+            transition: color 0.3s ease;
+          }
+
+          .card:hover p {
+            color: #374151; /* Darker gray */
+          }
+          /* General section styling */
+          .core {
+            background-color: #ffffff;
+            padding: 20px;
+            overflow: hidden;
+          }
+
+          /* Fade-in animation for text and image */
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          /* Text section animation */
+          .core .text-left {
+            animation: fadeInUp 1s ease-in-out;
+          }
+
+          /* Image animation */
+          .core img {
+            animation: fadeInUp 1.2s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          /* Hover effect for image */
+          .core img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+          }
+
+          /* Heading hover effect */
+          .core h1, .core h2 {
+            transition: color 0.3s ease;
+          }
+
+          .core h1:hover, .core h2:hover {
+            color: #0284c7; /* Darker cyan */
+          }
+
+          /* Keyframe for fade-in animation */
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          /* Initial state for animated elements */
+          .animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+          }
+
+          /* When the element is in view, add this class to trigger the animation */
+          .animate.active {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+        </style>
   </head>
 
   <body class="font-poppins">
@@ -30,7 +149,11 @@
           <!-- Logo -->
           <div class="flex items-center">
             <a href="#" class="text-2xl font-bold text-cyan-600">
-              <img src="./images/logo-allo.jpg" alt="Allo Imane-Zaki Logo" width="300px" />
+              <img
+                src="./images/logo-allo.jpg"
+                alt="Allo Imane-Zaki Logo"
+                width="250px"
+              />
             </a>
           </div>
 
@@ -38,7 +161,7 @@
           <div class="hidden md:flex items-center space-x-4">
             <a href="" class="text-gray-500 hover:text-cyan-600">Home</a>
             <a href="#about" class="text-gray-500 hover:text-cyan-600">About</a>
-            <a href="#" class="text-gray-500 hover:text-cyan-600">Services</a>
+            <a href="#service" class="text-gray-500 hover:text-cyan-600">Services</a>
             <a href="#" class="text-gray-500 hover:text-cyan-600">Contact</a>
             <a
               href="#"
@@ -109,51 +232,161 @@
 
     <div class="core bg-white" id="#about">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-40">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-20">
           <!-- Text Section -->
           <div class="text-left mt-6 md:mt-14 md:pr-10">
-            <h1 class="text-cyan-600 font-bold text-2xl md:text-3xl">NETTOYAGE</h1>
+            <h1 class="text-cyan-600 font-bold text-2xl md:text-3xl">
+              NETTOYAGE
+            </h1>
             <h2 class="text-xl md:text-2xl pb-4 md:pb-6 font-semibold">
-              Votre Société de Nettoyage <br> de Confiance
+              Votre Société de Nettoyage <br />
+              de Confiance
             </h2>
             <p class="text-gray-600 leading-relaxed">
-              <b>ALLO IMANE-ZAKI</b> est une entreprise polyvalente spécialisée dans les travaux de construction, de rénovation et d’aménagement, allant de la menuiserie bois et aluminium à la plomberie, l’électricité, la peinture et la construction métallique. Nous proposons également des services d’embellissement, de gestion événementielle, d’entretien d’espaces verts, ainsi que des solutions en génie civil, hydraulique et transactions immobilières. Actifs dans la distribution, le négoce, l’import-export de matériaux, et les services de communication, nous offrons également des solutions de recrutement et d’intérim. Notre mission est de répondre aux besoins variés de nos clients avec professionnalisme, qualité et un engagement envers un développement durable.
+              <b>ALLO IMANE-ZAKI</b> est une entreprise polyvalente spécialisée
+              dans les travaux de construction, de rénovation et d’aménagement,
+              allant de la menuiserie bois et aluminium à la plomberie,
+              l’électricité, la peinture et la construction métallique. Nous
+              proposons également des services d’embellissement, de gestion
+              événementielle, d’entretien d’espaces verts, ainsi que des
+              solutions en génie civil, hydraulique et transactions
+              immobilières. Actifs dans la distribution, le négoce,
+              l’import-export de matériaux, et les services de communication,
+              nous offrons également des solutions de recrutement et d’intérim.
+              Notre mission est de répondre aux besoins variés de nos clients
+              avec professionnalisme, qualité et un engagement envers un
+              développement durable.
             </p>
           </div>
-    
+
           <!-- Image Section -->
           <div class="flex justify-center items-center">
-            <br>
-            <img src="./images/23.jpeg" alt="Nettoyage" class="w-full max-w-md rounded-lg shadow-lg">
+            <br />
+            <img
+              src="./images/23.jpeg"
+              alt="Nettoyage"
+              class="w-full max-w-md rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="bg-cyan-600 text-white">
-      <div class="container mx-auto px-4 py-10 sm:py-16 md:py-24 lg:py-32 xl:py-20">
+    <div class="text-cyan-600 bg-white">
+      <div
+        class="container mx-auto px-4 py-10 sm:py-16 md:py-24 lg:py-32 xl:py-20"
+      >
         <p class="text-base sm:text-lg md:text-xl leading-relaxed text-center">
-          <img src="./images/map.webp" alt="ALLO" class="block mx-auto" width="150px">
-          <h1 class="text-3xl text-center mt-8">Découvrez les villes marocaines  <br> où nous faisons la différence !</h1>
-          <p class="text-lg text-center">Besoin d’un service de nettoyage fiable et efficace ? <br>
-            Avec ALLO, redonnez éclat et fraîcheur à vos <espaces class="br"></espaces> Partout au Maroc, <br>
-            nous transformons vos lieux en véritables modèles de propreté !
-            <br>
+          <img
+            src="./images/map.webp"
+            alt="ALLO"
+            class="block mx-auto"
+            width="150px"
+          />
+        </p>
+
+        <h1 class="text-3xl text-center mt-8">
+          Découvrez où nous faisons <br />
+           la différence !
+        </h1>
+        <p class="text-lg text-center text-gray-500">
+          Besoin d’un service de nettoyage fiable et efficace ? <br />
+          Avec ALLO, redonnez éclat et fraîcheur à vos
+          <espaces class="br"></espaces> Partout au Maroc, <br />
+          nous transformons vos lieux en véritables modèles de propreté !
+          <br> <br>
+          <a href="#contact" class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+            Contactez-nous sur whatsapp
+          </a>
+          
         </p>
       </div>
     </div>
-    
-    
+
+
+    <div class="core bg-white" id="#service">
+      <div class="container mx-auto px-4">
+        <h1 class="text-3xl text-cyan-600 text-center"></h1>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 p-6 md:p-20 text-center ">
+          <div class="card">
+            <img src="./images/25.webp" alt="image" width="80px" class="mx-auto">
+            <h1 class="text-lg text-cyan-600">Travaux de construction et de rénovation</h1>
+            <p class="text-gray-500">
+              De la menuiserie bois et aluminium, plomberie, électricité, à la construction métallique et aux finitions (peinture, vitrerie, revêtements).
+            </p>
+          </div>
+          <div class="card">
+            <img src="./images/26.webp" alt="image" width="80px" class="mx-auto">
+            <h1 class="text-lg text-cyan-600">Aménagements intérieurs et extérieurs</h1>
+            <p class="text-gray-500">
+              Décoration, rénovation, embellissement et optimisation d'espaces.
+            </p>
+          </div><div class="card">
+            <img src="./images/37.webp" alt="image" width="80px" class="mx-auto">
+            <h1 class="text-lg text-cyan-600">Travaux de génie civil et hydraulique</h1>
+            <p class="text-gray-500">
+              Solutions d’assainissement, adduction et aménagements agricoles, industriels et touristiques.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./images/29.png" alt="image" width="80px" class="mx-auto">
+            <h1 class="text-lg text-cyan-600">Services immobilier</h1>
+            <p class="text-gray-500">
+              Achat, vente et développement de terrains et propriétés.
+            </p>
+          </div>
+
+          <div class="card">
+            <img src="./images/38.webp" alt="image" width="80px" class="mx-auto">
+            <h1 class="text-lg text-cyan-600">Gestion événementielle</h1>
+            <p class="text-gray-500">
+              Organisation d’événements et services traiteur.
+            </p>
+          </div>   
+          <div class="card">
+            <img src="./images/33.webp" alt="image" width="80px" class="mx-auto">
+            <h1 class="text-lg text-cyan-600">Entretien d’espaces et services publics</h1>
+            <p class="text-gray-500">
+               Jardinage, éclairage public, nettoyage et entretien des espaces verts.
+            </p>
+          </div> 
+          <div class="card">
+            <img src="./images/34.webp" alt="image" width="80px" class="mx-auto">
+            <h1 class="text-lg text-cyan-600">Distribution et négoce</h1>
+            <p class="text-gray-500">
+              Achat, vente et livraison de marchandises variées, import-export de matériaux et équipements.
+            </p>
+          </div> 
+          <div class="card">
+            <img src="./images/35.webp" alt="image" width="80px" class="mx-auto">
+            <h1 class="text-lg text-cyan-600">Solutions de communication</h1>
+            <p class="text-gray-500">
+              Création et gestion de projets marketing et communication.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./images/36.webp" alt="image" width="80px" class="mx-auto">
+            <h1 class="text-lg text-cyan-600">Recrutement et intérim</h1>
+            <p class="text-gray-500">
+              Fourniture de personnel qualifié pour des missions temporaires ou permanentes
+            </p>
+          </div>         
+      </div>
+    </div>
+
 
     <footer>
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div class="p-4">
-            <img src="./images/logo-allo.jpg" alt="Allo Imane-Zaki Logo" width="250px" />
+            <img
+              src="./images/logo-allo.jpg"
+              alt="Allo Imane-Zaki Logo"
+              width="250px"
+            />
 
-            <h1>Votre Société de Nettoyage
-              de Confiance</h1>
-              <h2 class="text-cyan-600"> ALLO IMANE-ZAKI</h2>
+            <h1>Votre Société de Nettoyage de Confiance</h1>
+            <h2 class="text-cyan-600">ALLO IMANE-ZAKI</h2>
             <br />
           </div>
           <div class="p-4">
@@ -298,6 +531,59 @@
 
       // Initialize carousel
       updateCarousel();
+
+      // Select all cards
+      const cards = document.querySelectorAll('.card');
+
+      // Add hover effect dynamically
+      cards.forEach((card) => {
+        card.addEventListener('mouseenter', () => {
+          console.log('Hovered on:', card.querySelector('h1').textContent);
+          // Example: Change background color dynamically
+          card.style.backgroundColor = '#f0f9ff'; // Light cyan
+        });
+
+        card.addEventListener('mouseleave', () => {
+          // Reset background color
+          card.style.backgroundColor = '#ffffff'; // White
+        });
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".core .text-left, .core img");
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.animation = "fadeInUp 1s ease-in-out";
+              observer.unobserve(entry.target); // Stop observing once animation is triggered
+            }
+          });
+        },
+        { threshold: 0.5 } // Trigger when 50% of the element is visible
+      );
+
+      elements.forEach(el => observer.observe(el));
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      const animatedElements = document.querySelectorAll(".animate");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        {
+          threshold: 0.2, // Trigger when 20% of the element is visible
+        }
+      );
+
+      animatedElements.forEach((el) => observer.observe(el));
+    });
+
     </script>
   </body>
 </html>
