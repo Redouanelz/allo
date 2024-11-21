@@ -154,7 +154,7 @@
       </div>
     </div>
 
-    <div class="text-cyan-600 bg-white">
+    <div class="text-cyan-600 bg-white animate-section opacity-0">
       <div
         class="container mx-auto px-4 py-10 sm:py-16 md:py-24 lg:py-32 xl:py-20"
       >
@@ -166,24 +166,27 @@
             width="150px"
           />
         </p>
-
+    
         <h1 class="text-3xl text-center mt-8">
           Découvrez où nous faisons <br />
-           la différence !
+          la différence !
         </h1>
         <p class="text-lg text-center text-gray-500">
           Besoin d’un service de nettoyage fiable et efficace ? <br />
           Avec ALLO, redonnez éclat et fraîcheur à vous
-          <espaces class="br"></espaces> Partout au Maroc, <br />
-          nous transformons vos lieux en véritables modèles de propreté !
-          <br> <br>
-          <a href="#contact" class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400">
-            Contactez-nous sur whatsapp
+          <span class="br"></span> Partout au Maroc, <br />
+          nous transformons vos lieux en véritables modèles de propreté ! <br /><br />
+          <a
+            href="#contact"
+            class="bg-cyan-600 text-white px-4 py-2 rounded hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          >
+            Contactez-nous sur WhatsApp
           </a>
-          
         </p>
       </div>
     </div>
+    
+    
 
 
     <div class="core bg-white" id="service">
@@ -289,7 +292,7 @@
    
     <section class="bg-white py-12 mx-10" id="review">
       <div class="container mx-auto px-6">
-        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 hover:text-cyan-600">Nos Clients Parlent de Nous</h2>
+        <h3 class="text-2xl md:text-3xl font-bold text-center text-gray-800">Nos Clients Parlent de Nous</h3>
         <p class="text-center text-gray-600 mt-4">          
           Nous sommes fiers de bâtir des relations durables basées sur la confiance, la qualité et l'excellence de service.
         </p>
@@ -361,9 +364,22 @@
       </div>
     </section>
     
-    
+    <div>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 " >
+          <h3 class="text-2xl md:text-3xl font-bold text-center text-gray-800">Nous Contactez</h3>
+            <div class="pt-10 text-center">
+              Téléphone : <a href="tel:+21239380000">+21239380000</a>
+            </div>
+            <div class="pt-5 pb-10 text-center">
+              Email : <a href="mailto:allo@gmail.com">allo@gmail.com</a>
+            </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13245.97528270923!2d-6.931648900000001!3d33.902687949999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda70d85e1a313e9%3A0x9a8faa5023f115f2!2sScientific%20Schools!5e0!3m2!1sen!2sma!4v1732209948190!5m2!1sen!2sma" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
 
-    <footer>
+    <footer class="pt-10">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div class="p-4">
@@ -471,149 +487,8 @@
       </div>
     </footer>
 
-    <script>
-      // Wait until the DOM is fully loaded
-      document.addEventListener("DOMContentLoaded", () => {
-        // Toggle mobile menu
-        const menuToggle = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
-    
-        if (menuToggle && mobileMenu) {
-          menuToggle.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-          });
-        }
-    
-        // Initialize carousel
-        let currentIndex = 0;
-        const slides = document.querySelectorAll("#carousel img");
-        const prevButton = document.getElementById("prev");
-        const nextButton = document.getElementById("next");
-        const indicators = document.querySelectorAll(".flex button");
-    
-        if (prevButton && nextButton && slides.length > 0 && indicators.length > 0) {
-          function updateCarousel() {
-            const offset = -currentIndex * 100;
-            document.getElementById("carousel").style.transform = `translateX(${offset}%)`;
-    
-            // Update indicators
-            indicators.forEach((indicator, index) => {
-              indicator.classList.toggle("bg-teal-600", index === currentIndex);
-              indicator.classList.toggle("bg-gray-500", index !== currentIndex);
-            });
-          }
-    
-          prevButton.addEventListener("click", () => {
-            if (currentIndex > 0) {
-              currentIndex--;
-            } else {
-              currentIndex = slides.length - 1; // Loop to last slide
-            }
-            updateCarousel();
-          });
-    
-          nextButton.addEventListener("click", () => {
-            if (currentIndex < slides.length - 1) {
-              currentIndex++; // Fix this condition to loop to the first slide
-            } else {
-              currentIndex = 0; // Loop to first slide
-            }
-            updateCarousel();
-          });
-    
-          // Initialize carousel on page load
-          updateCarousel();
-        }
-    
-        // Select all cards
-        const cards = document.querySelectorAll('.card');
-    
-        // Add hover effect dynamically
-        cards.forEach((card) => {
-          card.addEventListener('mouseenter', () => {
-            console.log('Hovered on:', card.querySelector('h1')?.textContent);
-            // Example: Change background color dynamically
-            card.style.backgroundColor = '#f0f9ff'; // Light cyan
-          });
-    
-          card.addEventListener('mouseleave', () => {
-            // Reset background color
-            card.style.backgroundColor = '#ffffff'; // White
-          });
-        });
-    
-        // Intersection Observer for animations
-        const elements = document.querySelectorAll(".core .text-left, .core img");
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.style.animation = "fadeInUp 1s ease-in-out";
-              observer.unobserve(entry.target); // Stop observing once animation is triggered
-            }
-          });
-        }, { threshold: 0.5 });
-    
-        elements.forEach(el => observer.observe(el));
-    
-        // Handle animated elements
-        const animatedElements = document.querySelectorAll(".animate");
-        const animatedObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("active");
-            }
-          });
-        }, { threshold: 0.2 });
-    
-        animatedElements.forEach((el) => animatedObserver.observe(el));
-    
-        // Function to animate numbers
-        function animateNumbers(element, targetNumber, duration) {
-          let start = 0;
-          const increment = targetNumber / (duration / 20); // Determines the increment per step
-    
-          const updateNumber = () => {
-            start += increment;
-            if (start >= targetNumber) {
-              element.textContent = targetNumber.toLocaleString() + (element.dataset.target === "100" ? "%" : ""); // Add "%" if target is 100
-              return;
-            }
-            element.textContent = Math.floor(start).toLocaleString() + (element.dataset.target === "100" ? "%" : "");
-            requestAnimationFrame(updateNumber);
-          };
-    
-          requestAnimationFrame(updateNumber);
-        }
-    
-        // Function to check if an element is in the viewport
-        function isInViewport(el) {
-          const rect = el.getBoundingClientRect();
-          return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
-        }
-    
-        // Handle scroll event for number animation
-        function handleScroll() {
-          const parallaxSection = document.querySelector(".parallax");
-          const numberElements = document.querySelectorAll(".number");
-    
-          if (parallaxSection && isInViewport(parallaxSection)) {
-            numberElements.forEach((numberElement) => {
-              const targetNumber = parseInt(numberElement.dataset.target);
-              if (!numberElement.classList.contains("animated")) {
-                numberElement.classList.add("animated"); // Prevent re-triggering
-                animateNumbers(numberElement, targetNumber, 2000);
-              }
-            });
-            // Remove event listener after animation to prevent re-triggering
-            window.removeEventListener("scroll", handleScroll);
-          }
-        }
-    
-        // Attach scroll event listener
-        window.addEventListener("scroll", handleScroll);
-      });
-    </script>
-    
+        <script src="script.js"></script>
+
 
     
   </body>

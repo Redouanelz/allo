@@ -198,5 +198,11 @@
   #review{
     padding: 180px 0px;
   }
+  a{
+    color: rgb(0, 117, 117);
+  }
+  a:hover{
+    color: rgb(1, 68, 68);
+  }
   
 
