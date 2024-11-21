@@ -194,5 +194,8 @@
     opacity: 1; /* Fully visible */
     transform: translateY(0); /* Original position */
   }
+  #review{
+    padding: 180px 0px;
+  }
   
 
