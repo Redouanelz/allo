@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::selection {
+    color: white;
+    background-color: rgb(5, 99, 99);
+  }
+  /* Base card styling */
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Hover animation */
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Image scaling */
+  .card img {
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover img {
+    transform: scale(1.1);
+  }
+
+  /* Text color transition */
+  .card h1 {
+    color: #06b6d4; /* Cyan */
+    transition: color 0.3s ease;
+  }
+
+  .card:hover h1 {
+    color: #0284c7; /* Darker cyan */
+  }
+
+  .card p {
+    color: #6b7280; /* Gray */
+    transition: color 0.3s ease;
+  }
+
+  .card:hover p {
+    color: #374151; /* Darker gray */
+  }
+  /* General section styling */
+  .core {
+    background-color: #ffffff;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  /* Fade-in animation for text and image */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Text section animation */
+  .core .text-left {
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  /* Image animation */
+  .core img {
+    animation: fadeInUp 1.2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Hover effect for image */
+  .core img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Heading hover effect */
+  .core h1, .core h2 {
+    transition: color 0.3s ease;
+  }
+
+  .core h1:hover, .core h2:hover {
+    color: rgb(3, 199, 199); /* Darker cyan */
+  }
+
+  /* Keyframe for fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Initial state for animated elements */
+  .animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  /* When the element is in view, add this class to trigger the animation */
+  .animate.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Parallax Background Section */
+  .parallax {
+    position: relative; /* To position the overlay */
+    background-image: url('./images/20.webp'); /* Replace with your image path */
+    background-attachment: fixed; /* Keeps the background fixed */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px; /* Set height to 300px */
+   /* display: flex;*/
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color */
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  /* Add a cyan overlay with 50% opacity */
+  .parallax::before {
+    content: ''; /* Required for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 255, 255, 0.5); /* Cyan color with 50% opacity */
+    z-index: 1; /* Makes sure the overlay is on top of the background */
+  }
+
+  /* Text inside the parallax section */
+  .parallax h1 {
+    z-index: 5; /* Ensures the text is above the overlay */
+  }
+
+  /* Content Section */
+  .content-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  h2,
+  p {
+    margin: 0;
+  }
+ .parallax-content{
+    z-index: 5;
+    margin-top:50px;
+ }
+
+ .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Diameter of the circle */
+    height: 100px; /* Diameter of the circle */
+    background-color: #00bcd4; /* Circle color (cyan) */
+    border-radius: 50%; /* Makes the container a circle */
+    position: relative;
+}
+
+.icon-container img {
+    width: 50px; /* Size of the image */
+    height: auto;
+}
+
+.parallax-content h1 {
+    opacity: 1; /* Initially hidden */
+    transform: translateY(20px); /* Positioned slightly below */
+    transition: all 0.5s ease-out; /* Smooth animation */
+  }
+  
+  .parallax-content h1.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Original position */
+  }
+  
+

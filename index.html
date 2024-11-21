@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -21,125 +22,7 @@
         },
       };
     </script>
-        <style>
-          *::selection {
-            color: white;
-            background-color: rgb(5, 99, 99);
-          }
-          /* Base card styling */
-          .card {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-          }
 
-          /* Hover animation */
-          .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-          }
-
-          /* Image scaling */
-          .card img {
-            transition: transform 0.3s ease;
-          }
-
-          .card:hover img {
-            transform: scale(1.1);
-          }
-
-          /* Text color transition */
-          .card h1 {
-            color: #06b6d4; /* Cyan */
-            transition: color 0.3s ease;
-          }
-
-          .card:hover h1 {
-            color: #0284c7; /* Darker cyan */
-          }
-
-          .card p {
-            color: #6b7280; /* Gray */
-            transition: color 0.3s ease;
-          }
-
-          .card:hover p {
-            color: #374151; /* Darker gray */
-          }
-          /* General section styling */
-          .core {
-            background-color: #ffffff;
-            padding: 20px;
-            overflow: hidden;
-          }
-
-          /* Fade-in animation for text and image */
-          @keyframes fadeInUp {
-            from {
-              opacity: 0;
-              transform: translateY(30px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-
-          /* Text section animation */
-          .core .text-left {
-            animation: fadeInUp 1s ease-in-out;
-          }
-
-          /* Image animation */
-          .core img {
-            animation: fadeInUp 1.2s ease-in-out;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-          }
-
-          /* Hover effect for image */
-          .core img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-          }
-
-          /* Heading hover effect */
-          .core h1, .core h2 {
-            transition: color 0.3s ease;
-          }
-
-          .core h1:hover, .core h2:hover {
-            color: #0284c7; /* Darker cyan */
-          }
-
-          /* Keyframe for fade-in animation */
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-              transform: translateY(30px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-
-          /* Initial state for animated elements */
-          .animate {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-          }
-
-          /* When the element is in view, add this class to trigger the animation */
-          .animate.active {
-            opacity: 1;
-            transform: translateY(0);
-          }
-
-        </style>
   </head>
 
   <body class="font-poppins">
@@ -236,7 +119,7 @@
           <!-- Text Section -->
           <div class="text-left mt-6 md:mt-14 md:pr-10">
             <h1 class="text-cyan-600 font-bold text-2xl md:text-3xl">
-              NETTOYAGE
+              ALLO IMANE-ZAKI
             </h1>
             <h2 class="text-xl md:text-2xl pb-4 md:pb-6 font-semibold">
               Votre Société de Nettoyage <br />
@@ -304,7 +187,7 @@
     </div>
 
 
-    <div class="core bg-white" id="#service">
+    <div class="core bg-white" id="service">
       <div class="container mx-auto px-4">
         <h1 class="text-3xl text-cyan-600 text-center"></h1>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 p-6 md:p-20 text-center ">
@@ -375,6 +258,112 @@
     </div>
 
 
+    <div class="parallax">
+      <div class="grid grid-cols-3 md:grid-cols-3">
+        <div class="parallax-content">
+          <div class="icon-container mx-auto">
+            <img src="./images/40.webp" alt="numbers" width="50px" class="mx-auto" />
+          </div>
+          <h1 class="text-gray-600 text-center text-5xl mt-5 number" data-target="100">0%</h1>
+          <h2 class="text-gray-600 text-center text-xl mt-5">Satisfaction client</h2>
+        </div>
+    
+        <div class="parallax-content">
+          <div class="icon-container mx-auto">
+            <img src="./images/41.webp" alt="numbers" width="50px" class="mx-auto" />
+          </div>
+          <h1 class="text-gray-600 text-center text-5xl mt-5 number" data-target="10000">+0</h1>
+          <h2 class="text-gray-600 text-center text-xl mt-5">Heures de travaille</h2>
+        </div>
+    
+        <div class="parallax-content">
+          <div class="icon-container mx-auto">
+            <img src="./images/42.png" alt="numbers" width="50px" class="mx-auto" />
+          </div>
+          <h1 class="text-gray-600 text-center text-5xl mt-5 number" data-target="100">0%</h1>
+          <h2 class="text-gray-600 text-center text-xl mt-5">Confiance</h2>
+        </div>
+      </div>
+    </div>
+    
+    
+   
+    <section class="bg-gray-100 py-12" id="review">
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 hover:text-cyan-600">Nos Clients Parlent de Nous</h2>
+        <p class="text-center text-gray-600 mt-4">          
+          Nous sommes fiers de bâtir des relations durables basées sur la confiance, la qualité et l'excellence de service.
+        </p>
+    
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <div class="flex justify-center -mt-16">
+              <img
+                class="w-20 h-20 rounded-full border-2 border-teal-500"
+                src="https://randomuser.me/api/portraits/women/26.jpg"
+                alt="User 1"
+              />
+            </div>
+            <h3 class="text-lg font-bold text-center mt-4">Yassmine</h3>
+            <p class="text-gray-600 text-center text-sm">
+              "Trés bonne experience avec imane, mercii"
+            </p>
+            <div class="flex justify-center mt-4 text-teal-500">
+              <!-- Stars -->
+              <span>⭐️⭐️⭐️⭐️⭐️</span>
+            </div>
+          </div>
+    
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <div class="flex justify-center -mt-16">
+              <img
+                class="w-20 h-20 rounded-full border-2 border-teal-500"
+                src="https://randomuser.me/api/portraits/women/18.jpg"
+                alt="User 2"
+              />
+            </div>
+            <h3 class="text-lg font-bold text-center mt-4">Sarah</h3>
+            <p class="text-gray-600 text-center text-sm">
+              "khdma n9ia bzaf chukraan"
+            </p>
+            <div class="flex justify-center mt-4 text-teal-500">
+              <!-- Stars -->
+              <span>⭐️⭐️⭐️⭐️⭐️</span>
+            </div>
+          </div>
+    
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-white rounded-lg shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            <div class="flex justify-center -mt-16">
+              <img
+                class="w-20 h-20 rounded-full border-2 border-teal-500"
+                src="https://randomuser.me/api/portraits/men/94.jpg"
+                alt="User 3"
+              />
+            </div>
+            <h3 class="text-lg font-bold text-center mt-4">Yassine</h3>
+            <p class="text-gray-600 text-center text-sm">
+              "trés satisfait, nettoyage bien résusi, je recommande."
+            </p>
+            <div class="flex justify-center mt-4 text-teal-500">
+              <!-- Stars -->
+              <span>⭐️⭐️⭐️⭐️⭐️</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
     <footer>
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -385,7 +374,7 @@
               width="250px"
             />
 
-            <h1>Votre Société de Nettoyage de Confiance</h1>
+            <h1>Votre Société de Confiance</h1>
             <h2 class="text-cyan-600">ALLO IMANE-ZAKI</h2>
             <br />
           </div>
@@ -484,106 +473,149 @@
     </footer>
 
     <script>
-      // Toggle mobile menu
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      let currentIndex = 0;
-      const slides = document.querySelectorAll("#carousel img");
-      const prevButton = document.getElementById("prev");
-      const nextButton = document.getElementById("next");
-      const indicators = document.querySelectorAll(".flex button");
-
-      function updateCarousel() {
-        const offset = -currentIndex * 100;
-        document.getElementById(
-          "carousel"
-        ).style.transform = `translateX(${offset}%)`;
-
-        // Update indicators
-        indicators.forEach((indicator, index) => {
-          indicator.classList.toggle("bg-teal-600", index === currentIndex);
-          indicator.classList.toggle("bg-gray-500", index !== currentIndex);
-        });
-      }
-
-      prevButton.addEventListener("click", () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-        } else {
-          currentIndex = slides.length - 1; // Loop to last slide
-        }
-        updateCarousel();
-      });
-
-      nextButton.addEventListener("click", () => {
-        if (currentIndex < slides.length - 2) {
-          currentIndex++;
-        } else {
-          currentIndex = 0; // Loop to first slide
-        }
-        updateCarousel();
-      });
-
-      // Initialize carousel
-      updateCarousel();
-
-      // Select all cards
-      const cards = document.querySelectorAll('.card');
-
-      // Add hover effect dynamically
-      cards.forEach((card) => {
-        card.addEventListener('mouseenter', () => {
-          console.log('Hovered on:', card.querySelector('h1').textContent);
-          // Example: Change background color dynamically
-          card.style.backgroundColor = '#f0f9ff'; // Light cyan
-        });
-
-        card.addEventListener('mouseleave', () => {
-          // Reset background color
-          card.style.backgroundColor = '#ffffff'; // White
-        });
-      });
+      // Wait until the DOM is fully loaded
       document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll(".core .text-left, .core img");
-
-      const observer = new IntersectionObserver(
-        (entries, observer) => {
+        // Toggle mobile menu
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+    
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        }
+    
+        // Initialize carousel
+        let currentIndex = 0;
+        const slides = document.querySelectorAll("#carousel img");
+        const prevButton = document.getElementById("prev");
+        const nextButton = document.getElementById("next");
+        const indicators = document.querySelectorAll(".flex button");
+    
+        if (prevButton && nextButton && slides.length > 0 && indicators.length > 0) {
+          function updateCarousel() {
+            const offset = -currentIndex * 100;
+            document.getElementById("carousel").style.transform = `translateX(${offset}%)`;
+    
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+              indicator.classList.toggle("bg-teal-600", index === currentIndex);
+              indicator.classList.toggle("bg-gray-500", index !== currentIndex);
+            });
+          }
+    
+          prevButton.addEventListener("click", () => {
+            if (currentIndex > 0) {
+              currentIndex--;
+            } else {
+              currentIndex = slides.length - 1; // Loop to last slide
+            }
+            updateCarousel();
+          });
+    
+          nextButton.addEventListener("click", () => {
+            if (currentIndex < slides.length - 1) {
+              currentIndex++; // Fix this condition to loop to the first slide
+            } else {
+              currentIndex = 0; // Loop to first slide
+            }
+            updateCarousel();
+          });
+    
+          // Initialize carousel on page load
+          updateCarousel();
+        }
+    
+        // Select all cards
+        const cards = document.querySelectorAll('.card');
+    
+        // Add hover effect dynamically
+        cards.forEach((card) => {
+          card.addEventListener('mouseenter', () => {
+            console.log('Hovered on:', card.querySelector('h1')?.textContent);
+            // Example: Change background color dynamically
+            card.style.backgroundColor = '#f0f9ff'; // Light cyan
+          });
+    
+          card.addEventListener('mouseleave', () => {
+            // Reset background color
+            card.style.backgroundColor = '#ffffff'; // White
+          });
+        });
+    
+        // Intersection Observer for animations
+        const elements = document.querySelectorAll(".core .text-left, .core img");
+        const observer = new IntersectionObserver((entries, observer) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               entry.target.style.animation = "fadeInUp 1s ease-in-out";
               observer.unobserve(entry.target); // Stop observing once animation is triggered
             }
           });
-        },
-        { threshold: 0.5 } // Trigger when 50% of the element is visible
-      );
-
-      elements.forEach(el => observer.observe(el));
-    });
-    document.addEventListener("DOMContentLoaded", () => {
-      const animatedElements = document.querySelectorAll(".animate");
-
-      const observer = new IntersectionObserver(
-        (entries) => {
+        }, { threshold: 0.5 });
+    
+        elements.forEach(el => observer.observe(el));
+    
+        // Handle animated elements
+        const animatedElements = document.querySelectorAll(".animate");
+        const animatedObserver = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add("active");
             }
           });
-        },
-        {
-          threshold: 0.2, // Trigger when 20% of the element is visible
+        }, { threshold: 0.2 });
+    
+        animatedElements.forEach((el) => animatedObserver.observe(el));
+    
+        // Function to animate numbers
+        function animateNumbers(element, targetNumber, duration) {
+          let start = 0;
+          const increment = targetNumber / (duration / 20); // Determines the increment per step
+    
+          const updateNumber = () => {
+            start += increment;
+            if (start >= targetNumber) {
+              element.textContent = targetNumber.toLocaleString() + (element.dataset.target === "100" ? "%" : ""); // Add "%" if target is 100
+              return;
+            }
+            element.textContent = Math.floor(start).toLocaleString() + (element.dataset.target === "100" ? "%" : "");
+            requestAnimationFrame(updateNumber);
+          };
+    
+          requestAnimationFrame(updateNumber);
         }
-      );
-
-      animatedElements.forEach((el) => observer.observe(el));
-    });
-
+    
+        // Function to check if an element is in the viewport
+        function isInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+        }
+    
+        // Handle scroll event for number animation
+        function handleScroll() {
+          const parallaxSection = document.querySelector(".parallax");
+          const numberElements = document.querySelectorAll(".number");
+    
+          if (parallaxSection && isInViewport(parallaxSection)) {
+            numberElements.forEach((numberElement) => {
+              const targetNumber = parseInt(numberElement.dataset.target);
+              if (!numberElement.classList.contains("animated")) {
+                numberElement.classList.add("animated"); // Prevent re-triggering
+                animateNumbers(numberElement, targetNumber, 2000);
+              }
+            });
+            // Remove event listener after animation to prevent re-triggering
+            window.removeEventListener("scroll", handleScroll);
+          }
+        }
+    
+        // Attach scroll event listener
+        window.addEventListener("scroll", handleScroll);
+      });
     </script>
+    
+
+    
   </body>
 </html>
