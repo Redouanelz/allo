@@ -127,7 +127,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 300px; /* Set height to 300px */
+    height: 500px; /* Set height to 300px */
    /* display: flex;*/
     justify-content: center;
     align-items: center;
@@ -165,7 +165,7 @@
   }
  .parallax-content{
     z-index: 5;
-    margin-top:50px;
+    margin-top:150px;
  }
 
  .icon-container {
@@ -174,9 +174,10 @@
     justify-content: center;
     width: 100px; /* Diameter of the circle */
     height: 100px; /* Diameter of the circle */
-    background-color: #00bcd4; /* Circle color (cyan) */
+    background-color: transparent; /* 00bcd4 Circle color (cyan) */
     border-radius: 50%; /* Makes the container a circle */
     position: relative;
+    border: 1px solid black;
 }
 
 .icon-container img {
